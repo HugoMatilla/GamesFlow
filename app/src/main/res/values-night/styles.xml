@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="ThemeText" parent="AppTheme">
+        <item name="android:text">Light</item>
+    </style>
+
+</resources>
