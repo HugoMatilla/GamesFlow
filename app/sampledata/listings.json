@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "title": "Cyber Punk",
+      "imageUrl": "https://generacionxbox.com/wp-content/uploads/2019/09/cyberpunk-2077.jpg",
+      "caption": "Lorem ipsum Cyber Punk",
+      "rating": 5,
+      "genre": "ACTION"
+    },
+    {
+      "title": "Assasins Creed",
+      "imageUrl": "https://windumanoth.com/wp-content/uploads/2018/02/Wiedzminrpg2.jpg",
+      "caption": "Lorem Assasins Creed ipsum",
+      "rating": 5,
+      "genre": "ACTION"
+    },
+    {
+      "title": "Doom",
+      "imageUrl": "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_AssassinsCreedIIIDefinitiveEdition_image1600w.jpg",
+      "caption": "Lorem Doom ipsum Doom",
+      "rating": 5,
+      "genre": "ACTION"
+    },
+    {
+      "title": "God Of War 3",
+      "imageUrl": "https://www.muycomputer.com/wp-content/uploads/2017/11/DOOM-2016-1000x576.jpg",
+      "caption": "God Of War Lorem ipsum",
+      "rating": 5,
+      "genre": "ACTION"
+    },
+    {
+      "title": "The Witcher",
+      "imageUrl": "https://i0.wp.com/www.gadgetlogia.com/wp-content/uploads/2015/03/God-of-War-3-PS4.jpg?fit=809%2C484",
+      "caption": "Lorem The Witcher ipsum",
+      "rating": 5,
+      "genre": "ACTION"
+    }
+  ]
+}
+

@@ -1,7 +1,11 @@
 <resources>
 
-    <style name="ThemeText" parent="AppTheme">
-        <item name="android:text">Light</item>
+    <style name="Widget.MaterialComponents.BottomNavigationView.Colored.GamesFlow">
+        <item name="android:background">@color/md_black_1000</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.CardView.GamesFlow">
+        <item name="cardElevation">@dimen/elevation_xs</item>
     </style>
 
 </resources>

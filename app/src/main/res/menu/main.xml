@@ -5,6 +5,6 @@
     <item
         android:id="@+id/action_theme_mode"
         android:orderInCategory="100"
-        android:title="dark"
+        android:title="@string/theme_icon"
         app:showAsAction="always" />
 </menu>

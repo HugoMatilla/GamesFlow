@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.AppCompat.Headline.GamesFlow">
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/exo2_bold</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Body1.GamesFlow">
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/exo2_xlight</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Caption.GamesFlow">
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/exo2_regular</item>
+    </style>
+
+    <style name="TextAppearance.GamesFlow.MDI" parent="TextAppearance.AppCompat.Headline">
+        <item name="fontFamily">@font/mdi_regular</item>
+    </style>
+
+    <style name="Widget.AppCompat.ActionButton.GamesFlow">
+        <item name="fontFamily">@font/mdi_regular</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GamesFlow" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--COLOR-->
+        <item name="android:windowBackground">@color/purple_dark</item>
+        <item name="colorError">@color/md_red_900</item>
+        <!--TEXT-->
+        <item name="textAppearanceBody1">@style/TextAppearance.AppCompat.Body1.GamesFlow</item>
+        <item name="textAppearanceHeadline1">@style/TextAppearance.AppCompat.Headline.GamesFlow</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.AppCompat.Caption.GamesFlow</item>
+        <!--SHAPE-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.GamesFlow.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.GamesFlow.SmallComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.GamesFlow.SmallComponent</item>
+    </style>
+
+    <style name="Theme.GamesFlow" parent="Base.Theme.GamesFlow">
+        <!--COLOR-->
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorOnPrimary">@color/md_white_1000</item>
+        <item name="colorPrimaryDark">@color/purple_dark</item>
+
+        <item name="colorSecondary">@color/md_deep_orange_800</item>
+        <item name="colorOnSecondary">@color/md_grey_900</item>
+        <item name="colorSecondaryVariant">@color/md_deep_orange_900</item>
+
+        <item name="colorSurface">@color/md_white_1000</item>
+        <item name="colorOnSurface">@color/md_black_1000</item>
+    </style>
+
+    <style name="Theme.GamesFlow.Toolbar.Menu" parent="">
+        <item name="actionMenuTextColor">?attr/colorOnPrimary</item>
+        <item name="android:actionMenuTextColor">?attr/colorOnPrimary</item>
+        <item name="actionMenuTextAppearance">@style/TextAppearance.GamesFlow.MDI</item>
+    </style>
+
+</resources>

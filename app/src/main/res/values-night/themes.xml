@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.GamesFlow" parent="Base.Theme.GamesFlow">
+        <!--COLOR-->
+        <item name="colorPrimary">@color/purple_dark</item>
+        <item name="colorOnPrimary">@color/md_white_1000</item>
+        <item name="colorPrimaryDark">@color/purple_super_dark</item>
+
+        <item name="colorSecondary">@color/md_orange_300</item>
+        <item name="colorOnSecondary">@color/md_grey_100</item>
+        <item name="colorSecondaryVariant">@color/md_orange_100</item>
+
+        <item name="colorSurface">@color/md_black_1000</item>
+        <item name="colorOnSurface">@color/md_white_1000</item>
+    </style>
+
+</resources>
