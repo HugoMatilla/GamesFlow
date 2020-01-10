@@ -1,5 +1,7 @@
 package com.hugomatilla.gamesflow
 
+import com.hugomatilla.gamesflow.data.db.Game
+
 const val CyberPunkImage =
     "https://generacionxbox.com/wp-content/uploads/2019/09/cyberpunk-2077.jpg"
 const val WitcherImage =
@@ -63,4 +65,14 @@ fun getGames() = listOf(
         rating = 5,
         genre = Genre.ACTION
     )
+)
+
+fun List<Game>.toPresentation() = map { it.toPresentation() }
+fun Game.toPresentation() = GamePresentation(
+    title = title,
+    imageUrl = imageUrl,
+    caption = caption,
+    rating = rating,
+    genre = Genre.ACTION
+//    genre = Genre.valueOf(genre.toUpperCase())
 )

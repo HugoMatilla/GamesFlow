@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+import com.facebook.stetho.Stetho
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.games_list_fragment.*
 import splitties.toast.toast
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setupToolbar()
         setupBottomBar()
+        Stetho.initializeWithDefaults(this)
     }
 
     private fun setupToolbar() {

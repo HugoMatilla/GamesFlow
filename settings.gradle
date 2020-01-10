@@ -1,3 +1,4 @@
 rootProject.name='GamesFlow'
 include ':app'
 include ':domain'
+include ':data'
