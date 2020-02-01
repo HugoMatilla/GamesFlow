@@ -20,11 +20,11 @@ private val _loading: PublishProcessor<Boolean> = PublishProcessor.create()
 class Repository : AnkoLogger {
 
     private val service: IGamesCloudService = GamesCloudService().create()
-    fun fetchAndSaveProjects() {
+    fun fetchAndSaveGames() {
         _loading.onNext(true)
         service.getAllGames(
             onSuccess = {
-                saveProjectsInDB(it.results)
+                saveGamesInDB(it.results)
                 info("Success: ${it.results.size}")
                 _error.onNext("")
                 _loading.onNext(false)
@@ -37,12 +37,12 @@ class Repository : AnkoLogger {
         )
     }
 
-    private fun saveProjectsInDB(projects: List<GameCloud>) {
+    private fun saveGamesInDB(projects: List<GameCloud>) {
         // TODO assume that it never fails
         AppDB.getInstance().gameDao().insertAll(projects.map { it.toDb() })
     }
 
-    fun subscribeToProjectsUpdates(): RepositoryResult<List<Game>> {
+    fun subscribeToGamesUpdates(): RepositoryResult<List<Game>> {
         val db = AppDB.getInstance()
         val data = db.gameDao().getAllRx()
         return RepositoryResult(data, _error, _loading)

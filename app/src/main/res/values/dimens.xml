@@ -7,4 +7,5 @@
     <dimen name="margin_xs">4dp</dimen>
     <dimen name="elevation_xs">4dp</dimen>
     <dimen name="elevation_xxs">2dp</dimen>
+    <integer name="list_columns">1</integer>
 </resources>

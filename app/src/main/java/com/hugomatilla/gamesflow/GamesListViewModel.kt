@@ -16,14 +16,14 @@ class GamesListViewModel : ViewModel(), AnkoLogger {
     private val repo = Repository()
 
     init {
-        val repoResult = repo.subscribeToProjectsUpdates()
+        val repoResult = repo.subscribeToGamesUpdates()
         error = fromPublisher(repoResult.error)
         loading = fromPublisher(repoResult.loading)
         data = Transformations.map(fromPublisher(repoResult.data)) { it.toPresentation().toList() }
     }
 
-    fun fetchProjects() {
-        repo.fetchAndSaveProjects()
+    fun fetchGames() {
+        repo.fetchAndSaveGames()
     }
 
 }
