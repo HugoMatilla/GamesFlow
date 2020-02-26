@@ -3,7 +3,7 @@
 
     <style name="ShapeAppearance.GamesFlow.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">cut</item>
-        <item name="cornerSize">10%</item>
+        <item name="cornerSize">5%</item>
         <item name="cornerSizeTopLeft">0dp</item>
         <item name="cornerSizeTopRight">0dp</item>
     </style>

@@ -1,7 +1,11 @@
 <resources>
 
+    <!--    TODO  -> How to Make Colored on Day and not Colored on Dark mode-->
+
     <style name="Widget.MaterialComponents.BottomNavigationView.Colored.GamesFlow">
-        <item name="android:background">@color/md_black_1000</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="colorPrimary">?attr/colorOnSurface</item>
+        <item name="colorPrimaryVariant">?attr/colorOnSurface</item>
     </style>
 
     <style name="Widget.MaterialComponents.CardView.GamesFlow">

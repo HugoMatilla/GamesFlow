@@ -34,7 +34,7 @@ class GamesFragment : Fragment() {
 
     private fun initModel() {
         model = ViewModelProviders.of(this)[GamesListViewModel::class.java]
-        model?.data?.observe(this, Observer<List<GamePresentation>> {
+        model?.data?.observe(viewLifecycleOwner, Observer<List<GamePresentation>> {
             adapter?.setItems(it)
             swipeRefresh.isRefreshing = false
         })
@@ -45,7 +45,8 @@ class GamesFragment : Fragment() {
         adapter = GamesAdapter { performAction(it) }
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this.context)
-        recyclerView.layoutManager = GridLayoutManager(this.context, resources.getInteger(R.integer.list_columns))
+        recyclerView.layoutManager =
+            GridLayoutManager(this.context, resources.getInteger(R.integer.list_columns))
         adapter?.setItems(getGames())
     }
 

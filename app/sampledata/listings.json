@@ -1,39 +1,39 @@
 {
   "data": [
     {
-      "title": "Cyber Punk",
+      "title": "Cyber Punk 2077",
       "imageUrl": "https://generacionxbox.com/wp-content/uploads/2019/09/cyberpunk-2077.jpg",
-      "caption": "Lorem ipsum Cyber Punk",
+      "caption": "Cyberpunk 2077 is a science fiction game loosely based on the role-playing game Cyberpunk 2020. ",
       "rating": 5,
-      "genre": "ACTION"
+      "genre": "RPG"
     },
     {
       "title": "Assasins Creed",
       "imageUrl": "https://windumanoth.com/wp-content/uploads/2018/02/Wiedzminrpg2.jpg",
-      "caption": "Lorem Assasins Creed ipsum",
+      "caption": "The game takes place in 1191. In the present time, 2012, bartender Desmond Miles, the main character, kidnapped by the Corporation \"Abstergo industries\", which with the help of a machine called \"Animus\" wants to find an artefact. He learns that he is a descendant of the assassin Altair, who discovered this artefact. They need Desmond to know the location of the treasure through him. The game belongs to the category of open world projects.",
       "rating": 5,
-      "genre": "ACTION"
+      "genre": "ADVENTURE"
     },
     {
       "title": "Doom",
       "imageUrl": "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_AssassinsCreedIIIDefinitiveEdition_image1600w.jpg",
-      "caption": "Lorem Doom ipsum Doom",
+      "caption": "Return of the classic FPS, Doom (2016) acts as a reboot of the series and brings back the Doomslayer, protagonist of the original Doom games. In order to solve the energy crisis, humanity learned to harvest the energy from Hell, and when something went wrong and demon invasion has started, it’s up to the player to control the Doomslayer and destroy the evil. Doom is a fast-paced game that restores the concept of instant health packs and leaving the player against armies of Hell with no cover, no health regeneration or help from anyone",
       "rating": 5,
-      "genre": "ACTION"
+      "genre": "FPS"
     },
     {
       "title": "God Of War 3",
       "imageUrl": "https://www.muycomputer.com/wp-content/uploads/2017/11/DOOM-2016-1000x576.jpg",
-      "caption": "God Of War Lorem ipsum",
+      "caption": "The game is the fifth installment in the God of War series, and the sequel to 2007's God of War II. The action takes place in ancient Greece, the characters - the gods of Olympus and other characters of ancient Greek mythology. The main character is God of War Kratos. We meet him after the betrayal, as a result of which he found himself in the power of his father, the king of the gods of Olympus, Zeus. Kratos seeks Pandora to discover Pandora's Box, defeat Zeus, and end of reign of the Olympian gods.",
       "rating": 5,
-      "genre": "ACTION"
+      "genre": "ADVENTURE"
     },
     {
-      "title": "The Witcher",
+      "title": "The Witcher 3",
       "imageUrl": "https://i0.wp.com/www.gadgetlogia.com/wp-content/uploads/2015/03/God-of-War-3-PS4.jpg?fit=809%2C484",
-      "caption": "Lorem The Witcher ipsum",
+      "caption": "The third game in a series, it holds nothing back from the player. Open world adventures of the renowned monster slayer Geralt of Rivia are now even on a larger scale. Following the source material more accurately, this time Geralt is trying to find the child of the prophecy, Ciri while making a quick coin from various contracts on the side. Great attention to the world building above all creates an immersive story, where your decisions will shape the world around you.",
       "rating": 5,
-      "genre": "ACTION"
+      "genre": "RPG"
     }
   ]
 }
