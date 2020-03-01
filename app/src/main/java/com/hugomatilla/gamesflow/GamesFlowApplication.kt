@@ -1,23 +1,21 @@
 package com.hugomatilla.gamesflow
 
 import android.app.Application
-import android.content.Context
-import com.hugomatilla.data.AppDB
-import org.jetbrains.anko.AnkoLogger
+import com.hugomatilla.gamesflow.db.AppDB
+import com.hugomatilla.gamesflow.di.appModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 
-class GamesFlowApplication : Application(), AnkoLogger {
+class GamesFlowApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
         AppDB.init(this)
-        info("AppInit")
-
-    }
-
-    val appContext: Context
-        get() {
-            return applicationContext
+        startKoin {
+            androidContext(this@GamesFlowApplication)
+            modules(appModule)
         }
+    }
 
 }
