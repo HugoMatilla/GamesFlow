@@ -6,16 +6,32 @@ buildscript {
         kotlin_version = '1.3.61'
         koin_version = '2.1.1'
         room_version = "2.2.2"
+        coroutines_version = "1.3.3"
+        splitties_version = "2.1.1"
 
         libraries = [
-                rxJava         : 'io.reactivex.rxjava2:rxjava:2.2.9',
-                reactiveStreams: 'androidx.lifecycle:lifecycle-reactivestreams:2.1.0',
-                anko           : 'org.jetbrains.anko:anko-commons:0.10.8',
-                //ROOM
-                roomCompiler   : "androidx.room:room-compiler:$room_version",
-                roomRunTime    : "androidx.room:room-runtime:$room_version",
-                roomRxJava     : "androidx.room:room-rxjava2:$room_version"
+                anko             : 'org.jetbrains.anko:anko-commons:0.10.8',
+                splitties        : "com.louiscad.splitties:splitties-toast:$splitties_version",
 
+                //KOIN
+                koinCore         : "org.koin:koin-android:$koin_version",
+                koinViewModel    : "org.koin:koin-androidx-viewmodel:$koin_version",
+
+                // RX
+                rxJava           : 'io.reactivex.rxjava2:rxjava:2.2.9',
+                reactiveStreams  : 'androidx.lifecycle:lifecycle-reactivestreams:2.1.0',
+
+                //ROOM
+                roomCompiler     : "androidx.room:room-compiler:$room_version",
+                roomRunTime      : "androidx.room:room-runtime:$room_version",
+                roomRxJava       : "androidx.room:room-rxjava2:$room_version",
+
+                //COROUTINES
+                coroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version",
+                coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version",
+
+                constraintLayout : 'androidx.constraintlayout:constraintlayout:1.1.3',
+                material         : 'com.google.android.material:material:1.2.0-alpha05'
         ]
     }
     repositories {
@@ -23,7 +39,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.0'
+        classpath 'com.android.tools.build:gradle:3.6.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.koin:koin-gradle-plugin:$koin_version"
     }

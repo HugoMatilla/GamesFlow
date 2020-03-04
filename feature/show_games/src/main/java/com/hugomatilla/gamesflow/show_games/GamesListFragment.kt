@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.games_list_fragment.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.context.loadKoinModules
 import splitties.toast.toast
 
 class GamesListFragment : Fragment() {
@@ -18,7 +19,8 @@ class GamesListFragment : Fragment() {
         const val TAG = "GAMES_LIST"
     }
 
-    private var model: GamesListViewModel? = null
+    private val model: GamesListViewModel by viewModel()
+
     private var adapter: GamesAdapter? = null
 
     override fun onCreateView(
@@ -31,18 +33,18 @@ class GamesListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        loadKoinModules(gamesListModule)
         initRecyclerView()
         initSwipeRefresh()
         initModel()
     }
 
     private fun initModel() {
-        model = ViewModelProviders.of(this)[GamesListViewModel::class.java]
-        model?.data?.observe(viewLifecycleOwner, Observer<List<GamePresentation>> {
+        model.data.observe(viewLifecycleOwner, Observer<List<GamePresentation>> {
             adapter?.setItems(it)
-//            swipeRefresh.isRefreshing = false
+            swipeRefresh.isRefreshing = false
         })
-        model?.fetchGames()
+        model.fetchGames()
     }
 
     private fun initRecyclerView() {
@@ -63,7 +65,7 @@ class GamesListFragment : Fragment() {
     }
 
     private fun load() {
-        model?.fetchGames()
+        model.fetchGames()
 //        CoroutineScope(Dispatchers.IO).launch {
 //            delay(2000L)
 //            val res = DomainUseCase().getApi()

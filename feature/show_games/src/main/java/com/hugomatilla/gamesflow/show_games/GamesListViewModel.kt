@@ -6,14 +6,18 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.hugomatilla.gamesflow.show_games.data.Repository
 import org.jetbrains.anko.AnkoLogger
+import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.dsl.module
 
 
 class GamesListViewModel : ViewModel(), AnkoLogger {
+
 
     val data: LiveData<List<GamePresentation>>
     val error: LiveData<String?>
     val loading: LiveData<Boolean>
     private val repo = Repository()
+
 
     init {
         val repoResult = repo.subscribeToGamesUpdates()
@@ -25,6 +29,9 @@ class GamesListViewModel : ViewModel(), AnkoLogger {
     fun fetchGames() {
         repo.fetchAndSaveGames()
     }
-
 }
 
+
+val gamesListModule = module {
+    viewModel { GamesListViewModel() }
+}

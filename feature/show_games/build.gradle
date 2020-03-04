@@ -50,8 +50,9 @@ dependencies {
     implementation libraries.rxJava
     implementation libraries.roomRunTime
     implementation libraries.roomRxJava
+    implementation libraries.koinViewModel
+    implementation libraries.splitties
+    implementation libraries.constraintLayout
+    implementation libraries.material
 
-    // Splitties
-    def splitties_version = "2.1.1"
-    implementation("com.louiscad.splitties:splitties-toast:$splitties_version")
 }
