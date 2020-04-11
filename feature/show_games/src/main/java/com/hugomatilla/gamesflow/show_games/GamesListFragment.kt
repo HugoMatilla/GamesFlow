@@ -8,12 +8,17 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.hugomatilla.gamesflow.preferences.UserSettings
 import kotlinx.android.synthetic.main.games_list_fragment.*
+import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
+import org.koin.core.context.unloadKoinModules
 import splitties.toast.toast
 
 class GamesListFragment : Fragment() {
+
+    private val settings: UserSettings by inject()
 
     companion object {
         const val TAG = "GAMES_LIST"
@@ -37,6 +42,13 @@ class GamesListFragment : Fragment() {
         initRecyclerView()
         initSwipeRefresh()
         initModel()
+        setupToolbar()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        unloadKoinModules(gamesListModule)
+
     }
 
     private fun initModel() {
@@ -51,8 +63,7 @@ class GamesListFragment : Fragment() {
         adapter = GamesAdapter { performAction(it) }
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this.context)
-        recyclerView.layoutManager =
-            GridLayoutManager(this.context, resources.getInteger(R.integer.list_columns))
+        recyclerView.layoutManager = GridLayoutManager(this.context, resources.getInteger(R.integer.list_columns))
         adapter?.setItems(getGames())
     }
 
@@ -61,7 +72,7 @@ class GamesListFragment : Fragment() {
     }
 
     private fun initSwipeRefresh() {
-//        swipeRefresh.setOnRefreshListener { load() }
+        swipeRefresh.setOnRefreshListener { load() }
     }
 
     private fun load() {
@@ -76,5 +87,12 @@ class GamesListFragment : Fragment() {
 //        }
     }
 
+
+    private fun setupToolbar() {
+        toolbar.setOnMenuItemClickListener {
+            if (it.itemId == R.id.action_theme_mode) settings.toggleDarkMode()
+            true
+        }
+    }
 
 }

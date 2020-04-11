@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/core/cloud" />
             <option value="$PROJECT_DIR$/core/db" />
             <option value="$PROJECT_DIR$/core/preferences" />
+            <option value="$PROJECT_DIR$/core/ui" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/home" />
             <option value="$PROJECT_DIR$/feature/show_games" />

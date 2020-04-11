@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">GamesFlow</string>
     <string name="theme_icon" translatable="false">&#xF0DD;</string>
+    <string name="theme_type" translatable="false">light</string>
 </resources>

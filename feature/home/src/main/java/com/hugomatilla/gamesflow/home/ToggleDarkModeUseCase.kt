@@ -5,15 +5,16 @@ import org.koin.core.KoinComponent
 import org.koin.core.inject
 
 class ToggleDarkModeUseCase() : KoinComponent {
+
     private val settings: UserSettings by inject()
 
     fun toggleAndSave() {
-        settings.darkMode = !settings.darkMode
+//        settings.darkMode = !settings.darkMode
     }
 
     fun saveDarkMode(isDark: Boolean) {
-        settings.darkMode = isDark
+//        settings.darkMode = isDark
     }
 
-    fun getDarkMode() = settings.darkMode
+    fun getDarkMode() = settings.darkModeLiveData
 }

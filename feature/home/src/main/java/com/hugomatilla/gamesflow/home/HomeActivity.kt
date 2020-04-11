@@ -1,15 +1,13 @@
 package com.hugomatilla.gamesflow.home
 
-import android.graphics.Color
 import android.os.Bundle
-import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.commit
 import com.facebook.stetho.Stetho
 import com.hugomatilla.gamesflow.livedata.observeNonNull
 import com.hugomatilla.gamesflow.show_games.GamesListFragment
+import com.hugomatilla.gamesflow.ui.setDarkMode
 
 class HomeActivity : AppCompatActivity() {
 
@@ -36,13 +34,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupModel() {
-        viewModel.isDarkMode.observeNonNull(this) { setDarkMode(it) }
-    }
-
-    private fun setDarkMode(isDark: Boolean) {
-        AppCompatDelegate.setDefaultNightMode(if (isDark) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO)
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-        if (isDark) window.navigationBarColor = Color.BLACK
+        viewModel.isDarkMode.observeNonNull(this) {
+            println("🚛 Dark: $it")
+            window.setDarkMode(it)
+        }
     }
 
 //    private fun setupBottomBar() {
