@@ -28,6 +28,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -36,17 +37,10 @@ dependencies {
     implementation project(':core:preferences')
     implementation project(':core:db')
     implementation project(':feature:home')
-    implementation libraries.koinViewModel
-    implementation libraries.constraintLayout
-    implementation libraries.material
 
+    implementation libs.koinViewModel
+    implementation libs.ktxCore
+    implementation libs.appCompat
 
-    implementation 'com.squareup.picasso:picasso:2.71828'
-
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
 }

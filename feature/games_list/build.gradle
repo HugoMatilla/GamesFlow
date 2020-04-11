@@ -35,6 +35,21 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
+    implementation project(':core:db:')
+    implementation project(':core:ui')
+    implementation project(':core:preferences')
+    implementation libs.anko
+    implementation libs.reactiveStreams
+    implementation libs.rxJava
+    implementation libs.roomRunTime
+    implementation libs.roomRxJava
+    implementation libs.koinViewModel
+    implementation libs.splitties
+    implementation libs.constraintLayout
+    implementation libs.swipeRefreshLayout
+    implementation libs.material
+    implementation libs.krate
+
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
 
@@ -42,21 +57,5 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     implementation 'com.squareup.okhttp3:okhttp:4.2.2'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
-
-    implementation project(':core:db:')
-    implementation project(':core:ui')
-    implementation project(':core:preferences')
-    implementation libraries.anko
-    implementation libraries.reactiveStreams
-    implementation libraries.rxJava
-    implementation libraries.roomRunTime
-    implementation libraries.roomRxJava
-    implementation libraries.koinViewModel
-    implementation libraries.splitties
-    implementation libraries.constraintLayout
-    implementation libraries.swipeRefreshLayout
-    implementation libraries.material
-    implementation 'hu.autsoft:krate:0.4.0'
-
-
 }
+

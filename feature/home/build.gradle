@@ -37,24 +37,24 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
+
+    implementation libs.appCompat
+    implementation libs.ktxCore
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.facebook.stetho:stetho:1.5.1'
+
+    implementation libs.stetho
+    implementation libs.koinCore
+    implementation libs.ktxFragment
+    implementation libs.ktxActivity
+    implementation libs.extLifecycle
+    implementation libs.krate
+
     implementation project(':core:preferences')
     implementation project(':core:ui')
-    implementation "org.koin:koin-android:$koin_version"
-
-    implementation 'androidx.fragment:fragment-ktx:1.2.4'
-    implementation "androidx.activity:activity-ktx:1.1.0"
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-
-    implementation project(':libraries:livedata:')
     implementation project(':core:preferences:')
-    implementation project(':feature:show_games:')
-    implementation 'hu.autsoft:krate:0.4.0'
-
-
+    implementation project(':feature:games_list:')
+    implementation project(':libraries:livedata:')
 }

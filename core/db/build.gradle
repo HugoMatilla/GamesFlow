@@ -29,15 +29,15 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation libs.appCompat
+    implementation libs.ktxCore
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation libraries.rxJava
-    implementation libraries.anko
-    kapt libraries.roomCompiler
-    implementation libraries.roomRunTime
-    implementation libraries.roomRxJava
+    implementation libs.rxJava
+    implementation libs.anko
+    kapt libs.roomCompiler
+    implementation libs.roomRunTime
+    implementation libs.roomRxJava
 }

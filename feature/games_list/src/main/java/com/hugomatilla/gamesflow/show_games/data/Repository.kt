@@ -1,9 +1,9 @@
 package com.hugomatilla.gamesflow.show_games.data
 
 
-import com.hugomatilla.data.GameCloud
 import com.hugomatilla.gamesflow.db.AppDB
 import com.hugomatilla.gamesflow.db.game.Game
+import com.hugomatilla.gamesflow.show_games.data.cloud.GameCloud
 import com.hugomatilla.gamesflow.show_games.data.cloud.GamesCloudService
 import com.hugomatilla.gamesflow.show_games.data.cloud.IGamesCloudService
 import com.hugomatilla.gamesflow.show_games.data.cloud.getAllGames

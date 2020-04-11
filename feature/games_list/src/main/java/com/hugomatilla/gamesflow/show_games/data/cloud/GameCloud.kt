@@ -1,4 +1,4 @@
-package com.hugomatilla.data
+package com.hugomatilla.gamesflow.show_games.data.cloud
 
 data class GamesCloud(
     val results: List<GameCloud>

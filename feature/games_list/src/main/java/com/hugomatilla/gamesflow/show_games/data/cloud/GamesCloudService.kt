@@ -1,6 +1,5 @@
 package com.hugomatilla.gamesflow.show_games.data.cloud
 
-import com.hugomatilla.data.GamesCloud
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
